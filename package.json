@@ -1,0 +1,27 @@
+{
+  "name": "pcat",
+  "version": "1.0.0",
+  "description": "PCAT photo app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melihyelman/PCAT.git"
+  },
+  "keywords": [
+    "Photo",
+    "app",
+    "camera"
+  ],
+  "author": "Melih Yelman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melihyelman/PCAT/issues"
+  },
+  "homepage": "https://github.com/melihyelman/PCAT#readme",
+  "devDependencies": {
+    "prettier": "2.3.2"
+  }
+}
