@@ -24,10 +24,16 @@ const app = express();
 //connect db
 
 mongoose
-  .connect('mongodb://localhost/pcat-db', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
+  .connect(
+    'mongodb+srv://melih:14789653%3FMy.@cluster0.7hkgf.mongodb.net/pcat-db?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: false,
+    }
+  )
+  .then(() => {
+    console.log('Db connected');
   })
   .catch((err) => console.log(err));
 
@@ -61,7 +67,7 @@ app.put('/photos/:id', updatePhoto);
 
 app.delete('/photos/:id', deletePhoto);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Sunucu ${port} portunda başlatıldı..`);
 });
