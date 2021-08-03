@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 
 const ejs = require('ejs');
+const { password } = require('./config');
 const fileUpload = require('express-fileupload');
 
 const {
@@ -25,7 +26,7 @@ const app = express();
 
 mongoose
   .connect(
-    'mongodb+srv://melih:14789653%3FMy.@cluster0.7hkgf.mongodb.net/pcat-db?retryWrites=true&w=majority',
+    `mongodb+srv://melih:${password}@cluster0.7hkgf.mongodb.net/pcat-db?retryWrites=true&w=majority`,
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
